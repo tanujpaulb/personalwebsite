@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tanuj Bathla | Product Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f7fa;--bg2:#eef1f5;--sf:#fff;--tx:#1a1a1a;--t2:#555;--t3:#888;--ac:#0d9488;--al:#ccfbf1;--ah:#0f766e;--bd:#e2e5ea;--df:'Inter',-apple-system,sans-serif;--bf:'Inter',-apple-system,sans-serif;--mw:960px;--r:10px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--bf);background:var(--bg);color:var(--tx);line-height:1.6;font-size:15px;-webkit-font-smoothing:antialiased}
+
+nav{position:fixed;top:0;left:0;right:0;background:rgba(245,247,250,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);z-index:1000;padding:.85rem 2rem;border-bottom:1px solid var(--bd)}
+.ni{max-width:var(--mw);margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.nl{font-family:var(--df);font-size:1.35rem;color:var(--tx);text-decoration:none;font-weight:600}
+.nk{display:flex;gap:1.6rem;align-items:center}
+.nk a{color:var(--t2);text-decoration:none;font-size:.85rem;font-weight:500;transition:color .15s}
+.nk a:hover{color:var(--ac)}
+.nc{background:var(--ac)!important;color:#fff!important;padding:.5rem 1rem;border-radius:6px}
+.nc:hover{background:var(--ah)!important}
+
+.w{max-width:var(--mw);margin:0 auto;padding:0 2rem}
+.sl{font-size:.78rem;color:var(--ac);text-transform:uppercase;letter-spacing:.12em;font-weight:600;margin-bottom:.3rem}
+.st{font-family:var(--df);font-size:clamp(1.7rem,3vw,2.1rem);font-weight:700;margin-bottom:2rem}
+.tc{text-align:center}
+
+/* HERO */
+.hero{padding-top:6rem}
+.hr{display:grid;grid-template-columns:220px 1fr;gap:2.5rem;align-items:center}
+.hp{width:220px;height:220px;border-radius:50%;border:3px solid var(--al);object-fit:cover;box-shadow:0 4px 20px rgba(13,148,136,.1)}
+.ht h1{font-family:var(--df);font-size:clamp(2rem,3.5vw,2.6rem);font-weight:700;line-height:1.15;margin-bottom:.75rem}
+.ht p{font-size:1rem;color:var(--t2);line-height:1.65;max-width:480px}
+.sb{border-top:1px solid var(--bd);margin-top:2rem;padding:1.5rem 0 2.5rem}
+.sr{display:flex;justify-content:space-between;max-width:680px;margin:0 auto}
+.ss{text-align:center}
+.sn{font-family:var(--df);font-size:2rem}
+.slb{font-size:.78rem;color:var(--t3)}
+
+/* PRODUCTS */
+.products{padding:4.5rem 0 3rem}
+.cw{overflow:hidden;border-radius:var(--r)}
+.ct{display:flex;transition:transform .45s cubic-bezier(.4,0,.2,1)}
+.cs{min-width:100%}
+.pc{position:relative;aspect-ratio:16/10;border-radius:var(--r);overflow:hidden;background:#1e293b}
+.pc img{width:100%;height:100%;object-fit:cover;object-position:center}
+.pi{position:absolute;bottom:0;left:0;right:0;padding:1rem 1.25rem;background:linear-gradient(to top,rgba(0,0,0,.8) 0%,transparent 100%)}
+.pi h3{font-family:var(--df);font-size:1.2rem;color:#fff;font-weight:400;margin-bottom:.1rem}
+.pi p{font-size:.75rem;color:rgba(255,255,255,.7)}
+.cn{display:flex;justify-content:center;align-items:center;gap:1rem;margin-top:1rem}
+.cb{width:32px;height:32px;border-radius:50%;border:1px solid var(--bd);background:var(--sf);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;color:var(--t2)}
+.cb:hover{border-color:var(--ac);color:var(--ac)}
+.cb:disabled{opacity:.25;cursor:default}
+.cd{display:flex;gap:6px}
+.cdot{width:7px;height:7px;border-radius:50%;border:none;background:var(--bd);cursor:pointer;padding:0;transition:background .15s}
+.cdot.active{background:var(--ac)}
+
+/* IMPACT */
+.impact{padding:4.5rem 0}
+.ic{display:grid;grid-template-columns:150px 1fr;gap:1.75rem;padding:1.75rem;background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);margin-bottom:1rem;transition:border-color .15s,box-shadow .15s}
+.ic:last-child{margin-bottom:0}
+.ic:hover{border-color:var(--ac);box-shadow:0 2px 12px rgba(0,0,0,.04)}
+
+.il{display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.ico{font-size:.9rem;font-weight:600;color:var(--tx);text-align:center;line-height:1.2}
+.ilg{width:110px;height:70px;object-fit:contain;border-radius:6px}
+
+/* Got It + Yes Bank: CSS rendered logos */
+.logo-gotit{width:110px;height:70px;background:#fff;border:1px solid var(--bd);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--bf);font-size:1.15rem;font-weight:500;color:var(--tx);letter-spacing:-.02em;position:relative}
+.logo-gotit .caret{color:#2563eb;font-size:.6rem;position:absolute;bottom:18px;left:calc(50% + 14px)}
+.logo-yesbank{width:70px;height:70px;background:#003d99;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:.7rem;line-height:1.1;letter-spacing:.03em;position:relative;overflow:hidden}
+.logo-yesbank::after{content:'✓';position:absolute;right:12px;top:50%;transform:translateY(-50%) rotate(-10deg);font-size:1.4rem;color:#e53935;font-weight:400}
+
+.ir{font-family:var(--df);font-size:1.2rem;font-weight:400;margin-bottom:.5rem}
+.ib{list-style:none;padding:0;margin-bottom:.75rem}
+.ib li{font-size:.9rem;color:var(--t2);padding-left:1rem;position:relative;margin-bottom:.2rem;line-height:1.55}
+.ib li::before{content:'•';position:absolute;left:0;color:var(--ac);font-weight:700}
+.ib strong{color:var(--tx);font-weight:600}
+.it{display:flex;gap:.4rem;flex-wrap:wrap}
+.itg{font-size:.72rem;color:var(--t3);border:1px solid var(--bd);border-radius:50px;padding:.2rem .65rem;background:var(--bg)}
+
+/* CREDENTIALS */
+.creds{padding:4.5rem 0;background:var(--bg2)}
+.crg{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;max-width:880px;margin:0 auto}
+.crc{display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.5rem 1rem;background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);transition:all .15s}
+.crc:hover{border-color:var(--ac);transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.crl{width:60px;height:60px;margin-bottom:.6rem;display:flex;align-items:center;justify-content:center}
+.crl img{max-width:100%;max-height:100%;object-fit:contain}
+.crn{font-weight:600;font-size:.88rem;margin-bottom:.15rem}
+.crd{font-size:.78rem;color:var(--t3)}
+
+/* CAPABILITIES */
+.caps{padding:4.5rem 0}
+.cpg{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.cpc{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:1.5rem;transition:all .15s}
+.cpc:hover{border-color:var(--ac);box-shadow:0 4px 14px rgba(0,0,0,.05);transform:translateY(-2px)}
+.cpi{width:40px;height:40px;background:var(--al);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:.8rem}
+.cpt{font-size:.95rem;font-weight:600;margin-bottom:.35rem}
+.cpd{font-size:.85rem;color:var(--t2);line-height:1.5}
+
+footer{background:var(--tx);color:#fff;padding:2rem;text-align:center}
+.fl{display:flex;justify-content:center;gap:1.5rem;margin-bottom:.5rem}
+.fl a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.85rem}
+.fl a:hover{color:#fff}
+.fs{font-size:.72rem;color:rgba(255,255,255,.3)}
+
+@media(max-width:800px){
+.hr{grid-template-columns:1fr;text-align:center}
+.hp{width:180px;height:180px;margin:0 auto}
+.ht{text-align:center}.ht p{margin:0 auto}
+.cpg{grid-template-columns:repeat(2,1fr)}
+.crg{grid-template-columns:repeat(2,1fr)}
+.ic{grid-template-columns:120px 1fr;gap:1.25rem;padding:1.25rem}
+.sr{flex-wrap:wrap;gap:1.5rem;justify-content:center}
+}
+@media(max-width:540px){
+.w{padding:0 1.25rem}
+.cpg{grid-template-columns:1fr}
+.nk{display:none}
+.sn{font-size:1.7rem}
+.ic{grid-template-columns:1fr;text-align:center}
+.it{justify-content:center}
+.il{flex-direction:row;gap:.75rem}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="ni">
+<a href="#" class="nl">Tanuj Bathla</a>
+<div class="nk">
+<a href="#work">Work</a>
+<a href="#impact">Impact</a>
+<a href="#credentials">Credentials</a>
+<a href="#capabilities">Expertise</a>
+<a href="/cdn-cgi/l/email-protection#0b7f6a657e617b6a7e67696a7f63676a4b6c666a626725686466" class="nc">Get in Touch</a>
+</div>
+</div></nav>
+
+<div class="w hero">
+<div class="hr">
+<img src="images/hero.jpg" alt="Tanuj Bathla" class="hp">
+<div class="ht">
+<h1>Hi, I'm Tanuj.</h1>
+<p>I build products people actually buy. Whether it's a new product line that doesn't exist yet or a platform that needs to find its next hundred customers, I figure out the path from idea to revenue.</p>
+</div>
+</div>
+<div class="sb"><div class="sr">
+<div class="ss"><div class="sn">13+</div><div class="slb">Years of Experience</div></div>
+<div class="ss"><div class="sn">$6M+</div><div class="slb">Revenue Driven</div></div>
+<div class="ss"><div class="sn">3M+</div><div class="slb">Sessions Delivered</div></div>
+<div class="ss"><div class="sn">5+</div><div class="slb">Products Launched</div></div>
+</div></div>
+</div>
+
+<div class="w products" id="work">
+<p class="sl tc">Selected Work</p>
+<h2 class="st tc">Products I've Built & Scaled</h2>
+<div class="cw"><div class="ct" id="cTrack">
+<div class="cs"><div class="pc"><img src="images/product-askhomey.jpg" alt="StudyBoost"><div class="pi"><h3>StudyBoost</h3><p>Premium 0→1 launch · First enterprise customer · $75K revenue</p></div></div></div>
+<div class="cs"><div class="pc"><img src="images/product-gotit.jpg" alt="PhotoStudy"><div class="pi"><h3>PhotoStudy</h3><p>AI-powered tutoring · 250+ university partners · $1.5M+ ARR</p></div></div></div>
+<div class="cs"><div class="pc"><img src="images/product-yesbank-1.jpg" alt="CryptoFabrik"><div class="pi"><h3>CryptoFabrik</h3><p>Cross-asset trading platform · $250K+ traded volume</p></div></div></div>
+<div class="cs"><div class="pc"><img src="images/product-yesbank-2.jpg" alt="Finance Tracker"><div class="pi"><h3>Finance Tracker</h3><p>Personal project · LLM-powered expense tracking</p></div></div></div>
+<div class="cs"><div class="pc"><img src="images/product-yesbank-3.jpg" alt="Climate Tech"><div class="pi"><h3>DAC Commercialization</h3><p>Lab to market · Europe & GCC entry · $15M+ pipeline</p></div></div></div>
+</div></div>
+<div class="cn">
+<button class="cb" id="pB"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+<div class="cd"><button class="cdot active" data-s="0"></button><button class="cdot" data-s="1"></button><button class="cdot" data-s="2"></button><button class="cdot" data-s="3"></button><button class="cdot" data-s="4"></button></div>
+<button class="cb" id="nB"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></button>
+</div>
+</div>
+
+<div class="w impact" id="impact">
+<p class="sl">Professional Experience</p>
+<h2 class="st">My Impact</h2>
+
+<div class="ic">
+<div class="il">
+<div class="ico">YouWeb Incubator</div>
+<img src="images/logo-askhomey.jpg" alt="YouWeb" class="ilg" style="border-radius:8px;">
+</div>
+<div>
+<h3 class="ir">Strategic Partnerships & Commercialization</h3>
+<ul class="ib">
+<li>Built repeatable playbooks for taking two climate ventures to market</li>
+<li>Opened Europe and MENA, securing <strong>$15M+</strong> qualified pipeline</li>
+</ul>
+<div class="it"><span class="itg">Market Entry</span><span class="itg">Strategic Partnerships</span><span class="itg">Commercialization</span></div>
+</div>
+</div>
+
+<div class="ic">
+<div class="il">
+<div class="ico">Got It Inc.</div>
+<img src="images/logo-gotit.jpg" alt="Got It" class="ilg" style="width:110px;height:70px;object-fit:contain;border-radius:8px;border:1px solid var(--bd);background:#fff;">
+</div>
+<div>
+<h3 class="ir">Product Lead</h3>
+<ul class="ib">
+<li>Ran a <strong>$1.5M+</strong> ARR edtech platform serving <strong>250+</strong> US universities</li>
+<li>Launched three products from zero to paying customers</li>
+<li>Led two major platform integrations that drove <strong>900%</strong> engagement lift</li>
+</ul>
+<div class="it"><span class="itg">Product Strategy</span><span class="itg">Technical Partnerships</span><span class="itg">0→1 Launches</span></div>
+</div>
+</div>
+
+<div class="ic">
+<div class="il">
+<div class="ico">FinFabrik</div>
+<img src="images/logo-iitd.jpg" alt="FinFabrik" class="ilg">
+</div>
+<div>
+<h3 class="ir">Product Operations Lead</h3>
+<ul class="ib">
+<li>Built and shipped a cross-asset trading platform from concept to <strong>$250K</strong> traded volume</li>
+<li>Won regulatory approval to launch in new Central Asian markets</li>
+</ul>
+<div class="it"><span class="itg">0→1 Product</span><span class="itg">Regulatory/Compliance</span><span class="itg">GTM</span></div>
+</div>
+</div>
+
+<div class="ic">
+<div class="il">
+<div class="ico">Got It Inc.</div>
+<img src="images/logo-iiml.jpg" alt="Got It" class="ilg" style="width:110px;height:70px;object-fit:contain;border-radius:8px;border:1px solid var(--bd);background:#fff;">
+</div>
+<div>
+<h3 class="ir">Operations Manager</h3>
+<ul class="ib">
+<li>Scaled a two-sided marketplace from 100 to <strong>2,000+</strong> supply side, built the engine the product ran on</li>
+</ul>
+<div class="it"><span class="itg">Marketplace Operations</span><span class="itg">Scaling</span></div>
+</div>
+</div>
+
+<div class="ic">
+<div class="il">
+<div class="ico">Yes Bank</div>
+<img src="images/logo-lbs.jpg" alt="Yes Bank" class="ilg" style="width:70px;height:70px;border-radius:50%;object-fit:cover;">
+</div>
+<div>
+<h3 class="ir">Relationship Manager</h3>
+<ul class="ib">
+<li><strong>30</strong> new corporate accounts, <strong>3X</strong> asset targets through cross-selling</li>
+</ul>
+<div class="it"><span class="itg">B2B Sales</span><span class="itg">Client Acquisition</span></div>
+</div>
+</div>
+</div>
+
+<div class="creds" id="credentials"><div class="w">
+<p class="sl tc">Education</p>
+<h2 class="st tc">Credentials</h2>
+<div class="crg">
+<div class="crc"><div class="crl"><img src="images/logo-google.jpg" alt="SSC"></div><div class="crn">St. Stephen's College</div><div class="crd">B.A. Economics (Honors)</div></div>
+<div class="crc"><div class="crl"><img src="images/logo-yesbank.jpg" alt="HKU"></div><div class="crn">University of Hong Kong</div><div class="crd">MBA · Dean's List</div></div>
+<div class="crc"><div class="crl"><img src="images/logo-lbs.jpg" alt="LBS"></div><div class="crn">London Business School</div><div class="crd">Exchange Program</div></div>
+<div class="crc"><div class="crl"><img src="images/logo-google.jpg" alt="Google"></div><div class="crn">Google</div><div class="crd">PM, UX & Digital Marketing</div></div>
+</div>
+</div></div>
+
+<div class="w caps" id="capabilities">
+<p class="sl tc">Expertise</p>
+<h2 class="st tc">How I Can Help</h2>
+<div class="cpg">
+<div class="cpc"><div class="cpi">📈</div><h3 class="cpt">GTM & Commercialization</h3><p class="cpd">You've built something people need but haven't figured out how to sell it yet. I work backwards from the customer to build the go-to-market. Who's buying, why now, what channels, what price point. I turn products into revenue.</p></div>
+<div class="cpc"><div class="cpi">🚀</div><h3 class="cpt">0→1 Product Launches</h3><p class="cpd">New product lines are messy. Ambiguous requirements, no playbook, stakeholders who want certainty you can't give yet. I've taken four products from blank canvas to paying customers. I know how to move fast without building the wrong thing.</p></div>
+<div class="cpc"><div class="cpi">🤝</div><h3 class="cpt">Partnerships & Ecosystem Building</h3><p class="cpd">The fastest way to scale is through partnered distribution. I build and manage the partner relationships, technical integrations, and joint GTM motions that turn platform ecosystems into growth engines.</p></div>
+<div class="cpc"><div class="cpi">👥</div><h3 class="cpt">Cross-functional Leadership</h3><p class="cpd">Great strategy dies in execution gaps between teams. I run the operating system, aligning engineering, design, sales, and compliance across time zones so products ship on time and stakeholders stay unblocked.</p></div>
+<div class="cpc"><div class="cpi">🎯</div><h3 class="cpt">Product Strategy & Lifecycle</h3><p class="cpd">Not every feature deserves to be built. I connect market signals, user research, and business goals into a roadmap that makes hard trade-offs clear so teams build what matters and kill what doesn't.</p></div>
+<div class="cpc"><div class="cpi">🤖</div><h3 class="cpt">Applied AI</h3><p class="cpd">AI is only valuable when it solves a real workflow problem. I focus on practical integration, connecting models to product features, designing the logic layer, and measuring whether AI actually moves the metric that matters.</p></div>
+</div>
+</div>
+
+<footer>
+<div class="fl"><a href="https://linkedin.com/in/tanujbathla" target="_blank">LinkedIn</a><a href="/cdn-cgi/l/email-protection#3541545b405f455440595754415d5954755258545c591b565a58">Email</a></div>
+<p class="fs">© 2026 Tanuj Bathla</p>
+</footer>
+
+<script>
+const t=document.getElementById('cTrack'),ds=document.querySelectorAll('.cdot'),pb=document.getElementById('pB'),nb=document.getElementById('nB');
+let c=0,n=5;
+function go(i){c=Math.max(0,Math.min(i,n-1));t.style.transform=`translateX(-${c*100}%)`;ds.forEach((d,j)=>d.classList.toggle('active',j===c));pb.disabled=c===0;nb.disabled=c===n-1;}
+pb.onclick=()=>go(c-1);
+nb.onclick=()=>go(c+1);
+ds.forEach(d=>d.onclick=()=>go(+d.dataset.s));
+go(0);
+</script>
+</body>
+</html>
