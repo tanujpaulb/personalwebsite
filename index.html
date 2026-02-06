@@ -105,6 +105,21 @@ footer{background:var(--tx);color:#fff;padding:2rem;text-align:center}
 .fl a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.85rem}
 .fl a:hover{color:#fff}
 .fs{font-size:.72rem;color:rgba(255,255,255,.3)}
+.contact-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.15);z-index:200}
+.contact-overlay.show{display:block}
+.contact-panel{position:fixed;top:60px;right:2rem;background:#fff;border:1px solid #e2e5ea;border-radius:12px;padding:20px 24px;box-shadow:0 8px 30px rgba(0,0,0,.1);z-index:300;display:none;min-width:380px}
+.contact-panel.show{display:block;animation:slideDown .2s ease}
+@keyframes slideDown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.contact-name{font-size:1rem;font-weight:600;margin-bottom:16px;color:#1a1a1a}
+.contact-items{display:flex;gap:12px}
+.contact-item{display:flex;align-items:center;gap:10px;padding:10px 16px;border:1px solid #e2e5ea;border-radius:8px;text-decoration:none;color:#1a1a1a;transition:all .15s;cursor:pointer;flex:1}
+.contact-item:hover{border-color:#0d9488;background:#f0fdfa}
+.ci-icon{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;background:rgba(13,148,136,.1);color:#0d9488}
+.ci-text{text-align:left}
+.ci-label{font-size:.68rem;color:#888;text-transform:uppercase;letter-spacing:.04em}
+.ci-value{font-size:.82rem;font-weight:500;color:#1a1a1a}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1a1a1a;color:#fff;padding:10px 20px;border-radius:8px;font-size:.85rem;opacity:0;transition:opacity .3s;pointer-events:none;z-index:400}
+.toast.show{opacity:1}
 
 @media(max-width:800px){
 .hero{padding-top:7rem}
@@ -136,9 +151,12 @@ footer{background:var(--tx);color:#fff;padding:2rem;text-align:center}
 <a href="#impact">Impact</a>
 <a href="#credentials">Credentials</a>
 <a href="#capabilities">Expertise</a>
-<a href="/cdn-cgi/l/email-protection#0b7f6a657e617b6a7e67696a7f63676a4b6c666a626725686466" class="nc">Get in Touch</a>
+<button class="nc" onclick="toggleContact()" style="border:none;cursor:pointer;font-family:inherit;font-size:.85rem;font-weight:500">Get in Touch</button>
 </div>
 </div></nav>
+<div class="contact-overlay" id="overlay" onclick="toggleContact()"></div>
+<div class="contact-panel" id="panel"><div class="contact-name">Tanuj Bathla</div><div class="contact-items"><div class="contact-item" onclick="copyEmail(event)"><div class="ci-icon">✉</div><div class="ci-text"><div class="ci-label">Email · click to copy</div><div class="ci-value">tanujpaulbathla@gmail.com</div></div></div><a href="https://linkedin.com/in/tanujbathla" target="_blank" class="contact-item"><div class="ci-icon">in</div><div class="ci-text"><div class="ci-label">LinkedIn</div><div class="ci-value">tanujbathla</div></div></a></div></div>
+<div class="toast" id="toast">Email copied!</div>
 
 <div class="w hero">
 <div class="hr">
@@ -277,7 +295,7 @@ footer{background:var(--tx);color:#fff;padding:2rem;text-align:center}
 </div>
 
 <footer>
-<div class="fl"><a href="https://linkedin.com/in/tanujbathla" target="_blank">LinkedIn</a><a href="/cdn-cgi/l/email-protection#3541545b405f455440595754415d5954755258545c591b565a58">Email</a></div>
+<div class="fl"><a href="https://linkedin.com/in/tanujbathla" target="_blank">LinkedIn</a><span style="color:rgba(255,255,255,.6);cursor:pointer;font-size:.85rem" onclick="copyEmail(event)">tanujpaulbathla@gmail.com</span></div>
 <p class="fs">© 2026 Tanuj Bathla</p>
 </footer>
 
@@ -289,6 +307,8 @@ pb.onclick=()=>go(c-1);
 nb.onclick=()=>go(c+1);
 ds.forEach(d=>d.onclick=()=>go(+d.dataset.s));
 go(0);
+function toggleContact(){document.getElementById("panel").classList.toggle("show");document.getElementById("overlay").classList.toggle("show")}
+function copyEmail(e){e.stopPropagation();navigator.clipboard.writeText("tanujpaulbathla@gmail.com");var t=document.getElementById("toast");t.classList.add("show");setTimeout(function(){t.classList.remove("show")},1500)}
 </script>
 </body>
 </html>
