@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Tanuj Bathla | Product Leader</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f5f7fa;--bg2:#eef1f5;--sf:#fff;--tx:#1a1a1a;--t2:#555;--t3:#888;--ac:#0d9488;--al:#ccfbf1;--ah:#0f766e;--bd:#e2e5ea;--df:'Inter',-apple-system,sans-serif;--bf:'Inter',-apple-system,sans-serif;--mw:960px;--r:10px}
+:root{--nav-h:64px;--bg:#f5f7fa;--bg2:#eef1f5;--sf:#fff;--tx:#1a1a1a;--t2:#555;--t3:#888;--ac:#0d9488;--al:#ccfbf1;--ah:#0f766e;--bd:#e2e5ea;--df:'Inter',-apple-system,sans-serif;--bf:'Inter',-apple-system,sans-serif;--mw:960px;--r:10px}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:var(--bf);background:var(--bg);color:var(--tx);line-height:1.6;font-size:15px;-webkit-font-smoothing:antialiased}
+body{padding-top:var(--nav-h);font-family:var(--bf);background:var(--bg);color:var(--tx);line-height:1.6;font-size:15px;-webkit-font-smoothing:antialiased}
 
-nav{position:fixed;top:0;left:0;right:0;background:rgba(245,247,250,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);z-index:1000;padding:.85rem 2rem;border-bottom:1px solid var(--bd)}
+nav{position:fixed;top:0;left:0;right:0;background:rgba(245,247,250,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);z-index:1000;padding:calc(.85rem + env(safe-area-inset-top)) 2rem .85rem;border-bottom:1px solid var(--bd)}
 .ni{max-width:var(--mw);margin:0 auto;display:flex;justify-content:space-between;align-items:center}
 .nl{font-family:var(--df);font-size:1.35rem;color:var(--tx);text-decoration:none;font-weight:600}
 .nk{display:flex;gap:1.6rem;align-items:center}
@@ -28,7 +28,7 @@ nav{position:fixed;top:0;left:0;right:0;background:rgba(245,247,250,.92);backdro
 .tc{text-align:center}
 
 /* HERO */
-.hero{padding-top:6rem}
+.hero{padding-top:2rem}
 .hr{display:grid;grid-template-columns:220px 1fr;gap:2.5rem;align-items:center}
 .hp{width:220px;height:220px;border-radius:50%;border:3px solid var(--al);object-fit:cover;box-shadow:0 4px 20px rgba(13,148,136,.1)}
 .ht h1{font-family:var(--df);font-size:clamp(2rem,3.5vw,2.6rem);font-weight:700;line-height:1.15;margin-bottom:.75rem}
